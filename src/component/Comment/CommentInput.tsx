@@ -1,7 +1,7 @@
 import styles from './styles/CommentInput.module.scss'
 import { FormEvent, useState } from "react";
 import { useDispatch } from "react-redux";
-import { addComment } from "../../store/projectReducer";
+import { addComment } from "../../store/projectReducer/actions/actions";
 import Button from "../Button/Button";
 import { useParams } from 'react-router-dom';
 import { UploadButton } from '@bytescale/upload-widget-react';

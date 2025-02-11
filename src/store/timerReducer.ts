@@ -11,13 +11,13 @@ const timerReducer = (state = initialState, action: any) => {
         case "START_TIMER":
             return {
                 ...state,
-                startTime: moment(), // Фиксируем время начала
+                startTime: moment(),
                 isRunning: true
             };
         case "UPDATE_TIMER":
             return {
                 ...state,
-                elapsedTime: action.payload // Обновляем время
+                elapsedTime: action.payload 
             };
         case "STOP_TIMER":
             return {

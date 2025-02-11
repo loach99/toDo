@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux'
 import styles from './styles/Create.module.scss'
-import { openProjectModal, openTaskModal } from '../../store/modalsReducer';
+import { openProjectModal, openTaskModal } from '../../store/modalReducer/actions/actions';
 import Button from '../Button/Button';
 import { useLocation } from 'react-router-dom';
 

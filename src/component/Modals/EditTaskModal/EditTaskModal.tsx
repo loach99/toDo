@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import ModalWrapper from "../ModalWrapper/ModalWrapper";
-import { closeEditModal } from "../../../store/modalsReducer";
+import { closeEditModal } from "../../../store/modalReducer/actions/actions";
 import { RootState } from "../../../store/store";
 import Input from "../../Input/Input";
-import { editTask } from "../../../store/projectReducer";
-import {  taskWindow } from "../../../store/taskReducer";
+import { editTask } from "../../../store/projectReducer/actions/actions";
+import { taskWindow } from "../../../store/taskReducer/actions/actions";
 import moment from "moment";
 interface EditModal {
     header: string

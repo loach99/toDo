@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import Task from '../../Task/Task';
 import styles from './styles/TaskModal.module.scss'
-import { closeTaskWindow } from '../../../store/modalsReducer';
+import { closeTaskWindow } from '../../../store/modalReducer/actions/actions';
 
 const ShowTaskModal = () => {
     const dispatch = useDispatch()

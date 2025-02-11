@@ -1,68 +1,88 @@
-.project__state{
+.project__state {
     padding: 15px 0;
     display: flex;
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
+
     @media screen and (max-width: 675px) {
         padding: 45px 0 35px;
         height: 100vh;
     }
+
     @media screen and (max-width: 575px) {
         padding: 45px 0 25px;
         height: auto;
     }
-    .task__state{
+
+    .task__state {
         background-color: #edffed;
         padding: 15px;
     }
-    .task__wrap{
+
+    .task__wrap {
         padding: 15px;
         display: flex;
         flex-direction: column;
         gap: 5px;
+        position: relative;
+
+        .task__btn__delete {
+            position: absolute;
+            right: 25px;
+            margin-top: 10px;
+        }
     }
-    >div{
+
+    >div {
         width: 30%;
         border-radius: 5px;
         min-height: 30vh;
     }
-    .task{
-        >.__header{
+
+    .task {
+        >.__header {
             padding: 5px;
             font-weight: 600;
             display: flex;
             flex-direction: column;
             gap: 5px;
             align-items: start;
-            >div:nth-child(2){
+
+            >div:nth-child(2) {
                 color: #ccf;
                 font-size: 12px;
                 text-decoration: underline;
             }
         }
-        >.__description{
+
+        >.__description {
             display: flex;
             flex-direction: column;
-            >div:nth-child(1){
+
+            >div:nth-child(1) {
                 padding: 15px;
             }
-            >div{
+
+            >div {
                 display: flex;
                 gap: 10px;
                 padding: 15px;
                 justify-content: space-between;
-                >div{
+
+                >div {
                     display: flex;
                     flex-direction: column;
                     gap: 5px;
                 }
             }
+
             @media screen and (max-width: 1250px) {
                 display: none;
             }
         }
-        &__priority__easy{
+
+        &__priority__easy {
             border-radius: 4px;
             background-color: rgba(26, 186, 26, 0.625);
             border: 2px solid rgb(15, 184, 15);
@@ -71,12 +91,14 @@
             font-weight: 600;
             text-align: center;
             color: rgb(2, 148, 2);
+
             @media screen and (max-width: 675px) {
                 font-size: 10px;
                 font-weight: 500;
             }
         }
-        &__priority__normal{
+
+        &__priority__normal {
             border-radius: 4px;
             background-color: rgba(255, 140, 0, 0.625);
             border: 2px solid rgb(184, 114, 15);
@@ -84,12 +106,14 @@
             padding: 5px;
             text-align: center;
             color: rgb(184, 114, 15);
+
             @media screen and (max-width: 675px) {
                 font-size: 10px;
                 font-weight: 500;
             }
         }
-        &__priority__hard{
+
+        &__priority__hard {
             border-radius: 4px;
             background-color: rgba(255, 4, 4, 0.625);
             border: 2px solid rgb(137, 0, 0);
@@ -97,11 +121,13 @@
             text-align: center;
             padding: 5px;
             color: rgb(137, 0, 0);
+
             @media screen and (max-width: 675px) {
                 font-size: 10px;
                 font-weight: 500;
             }
         }
+
         &__status__queue {
             background-color: #24afff70;
             border: none;
@@ -111,11 +137,13 @@
             border-radius: 4px;
             font-size: 12px;
             cursor: pointer;
+
             @media screen and (max-width: 675px) {
                 font-size: 10px;
                 font-weight: 500;
             }
         }
+
         &__status__development {
             background-color: #ffd32470;
             border: none;
@@ -125,11 +153,13 @@
             border-radius: 4px;
             font-size: 12px;
             cursor: pointer;
+
             @media screen and (max-width: 675px) {
                 font-size: 10px;
                 font-weight: 500;
             }
         }
+
         &__status__done {
             background-color: #0acf03ed;
             border: none;
@@ -139,6 +169,7 @@
             border-radius: 4px;
             font-size: 12px;
             cursor: pointer;
+
             @media screen and (max-width: 675px) {
                 font-size: 10px;
                 font-weight: 500;
@@ -146,12 +177,14 @@
         }
     }
 }
-.priority__wrap{
+
+.priority__wrap {
     display: flex;
     align-items: center;
     gap: 5px;
     justify-content: space-between;
-    >p{
+
+    >p {
         font-size: 14px;
         color: #ccc;
         font-weight: 600;

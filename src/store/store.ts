@@ -1,9 +1,9 @@
 import { applyMiddleware, combineReducers, legacy_createStore as createStore, Reducer } from 'redux';
 import { thunk, ThunkDispatch } from 'redux-thunk';
 import { Action } from 'redux';
-import projectReducer from './projectReducer';
-import modalsReducer from './modalsReducer';
-import taskReducer from './taskReducer';
+import projectReducer from './projectReducer/projectReducer';
+import modalsReducer from './modalReducer/modalsReducer';
+import taskReducer from './taskReducer/taskReducer';
 import timerReducer from './timerReducer';
 import { ModalsReducerState, ProjectType } from '../types';
 

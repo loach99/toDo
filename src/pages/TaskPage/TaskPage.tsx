@@ -6,11 +6,12 @@ import { ITask, Priority, TaskType } from "../../types";
 
 import { Draggable } from "../../component/DndComponents/Dragable";
 import styles from "./styles/TaskPage.module.scss";
-import { moveTask } from "../../store/projectReducer";
+import { deleteTask, moveTask } from "../../store/projectReducer/actions/actions";
 import { useParams } from "react-router-dom";
 import CreateTaskModal from "../../component/Modals/CreateTaskModal/CreateTaskModal";
 import ShowTaskModal from "../../component/Modals/TaskModal/ShowTaskModal";
 import { RootState } from "../../store/store";
+import Button from "../../component/Button/Button";
 
 const TaskPage = () => {
     const { taskId } = useParams();
@@ -71,8 +72,15 @@ const TaskPage = () => {
                             <div className={styles.task__wrap}>
                                 {taskStates[id].map((task: TaskType) => (
                                     <div key={task.number}>
+                                        <div className={styles.task__btn__delete}>
+                                            {!task.isFilteredOut && <div onClick={() => dispatch(deleteTask(task.number, Number(taskId)))}>
+                                                <Button deleteBtn />
+                                            </div>}
+                                        </div>
                                         {!task.isFilteredOut &&
+
                                             <Draggable id={task.number} task={task} container={id}>
+
                                                 <div className={styles.task}>
                                                     <div className={styles.__header}>
                                                         <div>

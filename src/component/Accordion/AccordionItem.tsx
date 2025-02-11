@@ -2,11 +2,11 @@ import { useRef } from "react";
 import styles from './styles/Accordion.module.scss'
 import Select from "../Select/Select";
 import { useDispatch, useSelector } from "react-redux";
-import { moveSubTask } from "../../store/projectReducer";
 import { TaskType, ProjectType, SubTask } from "../../types";
 import { useParams } from "react-router-dom";
 import { mockStatus } from "../../__mock__";
 import { RootState } from "../../store/store";
+import { moveSubTask } from "../../store/projectReducer/actions/actions";
 interface IAccordionItem {
     item: {
         header: string,

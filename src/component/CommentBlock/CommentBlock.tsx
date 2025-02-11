@@ -2,7 +2,7 @@ import CommentInput from "../Comment/CommentInput";
 import { Comments } from "../../types";
 import styles from './styles/CommentBlock.module.scss'
 import { useDispatch } from "react-redux";
-import { openFileModal } from "../../store/modalsReducer";
+import { openFileModal } from "../../store/modalReducer/actions/actions";
 import ShowFile from "../Modals/ShowFile/ShowFile";
 import { useState } from "react";
 interface IComment {

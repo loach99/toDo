@@ -82,11 +82,3 @@ export type TaskReducerState = {
     status: Status;
     number: number;
 };
-
-// Общий state приложения
-// export type RootState = {
-//     commentsReducer: CommentsReducerState;
-//     projectReducer: ProjectReducerState;
-//     modalsReducer: ModalsReducerState;
-//     taskReducer: TaskReducerState;
-// };

@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import ModalWrapper from "../ModalWrapper/ModalWrapper";
 import { RootState } from "../../../store/store";
-import { closeFileModal } from "../../../store/modalsReducer";
+import { closeFileModal } from "../../../store/modalReducer/actions/actions";
 
 const ShowFile = ({file}: {file: string}) => {
     const dispatch = useDispatch();

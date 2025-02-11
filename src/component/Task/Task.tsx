@@ -7,13 +7,13 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import Select from "../Select/Select";
 import { mockStatus } from "../../__mock__";
-import { moveTask } from "../../store/projectReducer";
+import { deleteTask, moveTask } from "../../store/projectReducer/actions/actions";
 import SubTaskBlock from "../SubTaskBlock/SubTaskBlock";
 import Button from "../Button/Button";
 import CreateSubTaskModal from "../Modals/CreateSubTask/CreateSubTaskModal";
 import { RootState } from "../../store/store";
 import EditTaskModal from "../Modals/EditTaskModal/EditTaskModal";
-import { openEditModal } from "../../store/modalsReducer";
+import { openEditModal } from "../../store/modalReducer/actions/actions";
 
 const Task = () => {
 
@@ -26,8 +26,10 @@ const Task = () => {
     const { number, header, description, date, priority, endDate } = useSelector((state: RootState) => state.taskReducer.taskWindow);
     const status = useSelector((state: RootState) => state.projectReducer.projects)
         .filter((project: any) => project.id === Number(taskId))
-        .map((project: any) => project.tasks
-            .filter((task: ITask) => task.number === number)[0].status)[0];
+        .flatMap((project: any) => project.tasks)
+        .filter((task: ITask) => task.number === number)[0].status;
+
+    
     const subTaskModal = useSelector((state: RootState) => state.modalsReducer.subTaskModal);
     const handleStatusSelect = (value: string) => {
         if (taskId) {
@@ -53,6 +55,7 @@ const Task = () => {
                     <div onClick={() => dispatch(openEditModal(true))}>
                         <Button edit content={'Редактировать'} />
                     </div>
+                   
                 </div>
                 <div>
                     <div className={styles.task__header__info}>

@@ -1,6 +1,6 @@
 import { useDraggable } from '@dnd-kit/core';
-import { openTaskWindow } from '../../store/modalsReducer';
-import { taskWindow } from '../../store/taskReducer';
+import { openTaskWindow } from '../../store/modalReducer/actions/actions';
+import { taskWindow } from '../../store/taskReducer/actions/actions';
 import { TaskType } from '../../types';
 import { useDispatch } from 'react-redux';
 import styles from './styles/Dnd.module.scss'
@@ -13,12 +13,12 @@ interface IDragable {
 export const Draggable = ({ id, children, container, task }: IDragable) => {
 
     const dispatch = useDispatch();
-    const showTask = (task: TaskType):void => {
+    const showTask = (task: TaskType): void => {
         dispatch(openTaskWindow(true));
         dispatch(taskWindow(task))
     }
     const { attributes, listeners, setNodeRef, transform } = useDraggable({
-        id: id ,
+        id: id,
         data: { container }
     });
     const style = transform ? {

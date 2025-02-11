@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
 import Button from "../../Button/Button";
 import ModalWrapper from "../ModalWrapper/ModalWrapper";
-import { closeSubtaskModal } from "../../../store/modalsReducer";
-import { resetTaskData, setSubtaskData } from "../../../store/taskReducer";
+import { closeSubtaskModal } from "../../../store/modalReducer/actions/actions";
+import { resetTaskData, setSubtaskData } from "../../../store/taskReducer/actions/actions";
 import styles from "./styles/SubTask.module.scss";
 import moment from "moment";
-import { addSubTask } from "../../../store/projectReducer";
+import { addSubTask } from "../../../store/projectReducer/actions/actions";
 import { RootState } from "../../../store/store";
 import Input from "../../Input/Input";
 import Select from "../../Select/Select";

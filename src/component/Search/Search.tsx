@@ -1,17 +1,17 @@
 import { useDispatch, useSelector } from "react-redux";
 import Input from "../Input/Input";
 import { RootState } from "../../store/store";
-import { filterProject, filterTask, setFilter } from "../../store/projectReducer";
+import { filterProject, filterTask, setFilter } from "../../store/projectReducer/actions/actions";
 import { useLocation, useParams } from "react-router-dom";
 
 const Search = () => {
     const dispatch = useDispatch();
     const projectName = useSelector((state: RootState) => state.projectReducer.filterData);
     const { taskId } = useParams();
-    const {pathname} = useLocation();
+    const { pathname } = useLocation();
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
         dispatch(setFilter(e.target.value));
-        if(pathname === '/') {
+        if (pathname === '/') {
             setTimeout(() => {
                 dispatch(filterProject(e.target.value));
             }, 300)

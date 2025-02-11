@@ -4,6 +4,17 @@
     justify-content: center;
     gap: 25px;
     padding: 25px;
+    >div{
+        position: relative;
+        .project__btn__delete{
+            position: absolute;
+            top: 15px;
+            right: 15px;
+                        
+            z-index: 1;
+        }
+    }
+  
     .project {
         width: 300px;
         height: 300px;
@@ -14,6 +25,7 @@
         overflow: hidden;
         background-color: #a7a7a7;
         cursor: pointer;
+        position: relative;
         @media screen and (max-width: 675px) {
             width: 250px;
             height: 250px;
@@ -21,6 +33,7 @@
         .project__image {
             z-index: 0;
             position: absolute;
+            transition: .3s;
             >img {
                 width: 280px;
                 object-fit: cover;
@@ -29,6 +42,7 @@
                 }
             }
         }
+    
         &__header {
             background-color: rgba(0, 0, 0, 0.5);
             width: 100%;
@@ -52,5 +66,8 @@
     }
     .project:hover .project__header {
         transform: translate(0, 0);
+    }
+    .project:hover .project__btn__delete {
+        opacity: 1;
     }
 }

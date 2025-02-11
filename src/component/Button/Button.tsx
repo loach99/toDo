@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux'
 import styles from '../Button/styles/Button.module.scss'
-import { openSubtaskModal } from '../../store/modalsReducer'
+import { openSubtaskModal } from '../../store/modalReducer/actions/actions'
 
 interface ButtonProps {
     content?: string
@@ -15,9 +15,10 @@ interface ButtonProps {
     status?: string
     addSubTask?: boolean
     edit?: boolean
+    deleteBtn?: boolean
 }
 
-const Button = ({ content, isComment, setActiveComment, isLike, isSend, isClose, addTask, status, addSubTask, edit }: ButtonProps) => {
+const Button = ({ content, isComment, setActiveComment, isLike, isSend, isClose, addTask, status, addSubTask, edit, deleteBtn }: ButtonProps) => {
     const changeStatus = (status: string) => {
         return styles[`status__${status}`]
     }
@@ -93,6 +94,13 @@ const Button = ({ content, isComment, setActiveComment, isLike, isSend, isClose,
                 <button className={styles.edit}>
                     {content}
                 </button>
+            </div>
+        )
+    }
+    if (deleteBtn) {
+        return (
+            <div>
+                <button className={styles.deleteBtn}>x</button>
             </div>
         )
     }

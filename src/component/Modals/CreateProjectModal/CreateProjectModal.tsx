@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { addProject, changeInput, clearInput } from '../../../store/projectReducer';
-import { closeProjectModal } from '../../../store/modalsReducer';
+import { addProject, changeInput, clearInput } from '../../../store/projectReducer/actions/actions';
+import { closeProjectModal } from '../../../store/modalReducer/actions/actions';
 import ModalWrapper from '../ModalWrapper/ModalWrapper'
 import Button from '../../Button/Button';
 import Input from '../../Input/Input';
@@ -11,7 +11,7 @@ import { useState } from 'react';
 const CreateProjectModal = ({ isOpen }: { isOpen: boolean }) => {
     const dispatch = useDispatch();
     const { name, description } = useSelector((state: RootState) => state.projectReducer);
-    const  [files, setFiles] = useState<string>('');
+    const [files, setFiles] = useState<string>('');
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
         dispatch(changeInput(e.target.name, e.target.value));
     };

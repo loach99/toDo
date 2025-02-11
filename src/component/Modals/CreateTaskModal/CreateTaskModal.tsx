@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
-import { resetTaskData, setTaskData } from '../../../store/taskReducer';
-import { closeTaskModal } from '../../../store/modalsReducer';
-import { addTask } from '../../../store/projectReducer';
+import { resetTaskData, setTaskData } from '../../../store/taskReducer/actions/actions';
+import { closeTaskModal } from '../../../store/modalReducer/actions/actions';
+import { addTask } from '../../../store/projectReducer/actions/actions';
 import ModalWrapper from '../ModalWrapper/ModalWrapper';
 import Button from '../../Button/Button';
 import { RootState } from '../../../store/store';
