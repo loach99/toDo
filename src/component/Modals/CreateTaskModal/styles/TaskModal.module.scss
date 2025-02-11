@@ -1,0 +1,17 @@
+.modal__wrap {
+    width: 360px;
+
+    .select {
+        >div {
+            gap: 10px;
+            >div {
+                width: 100%;
+
+                >div:nth-child(2) {
+                    height: 40px;
+                }
+            }
+        }
+
+    }
+}

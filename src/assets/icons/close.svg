@@ -1,0 +1,18 @@
+<svg data-name="pixelClose" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+    viewBox="0 0 15 15">
+    <g transform="translate(-26 -22)">
+        <g transform="translate(25.415 21.415)">
+            <g transform="translate(0 0)">
+                <rect width="3" height="3" transform="translate(0.585 0.585)" fill="currentColor"></rect>
+                <rect width="3" height="3" transform="translate(12.585 0.585)" fill="currentColor"></rect>
+                <rect width="3" height="3" transform="translate(3.585 3.585)" fill="currentColor"></rect>
+                <rect width="3" height="3" transform="translate(9.585 3.585)" fill="currentColor"></rect>
+                <rect width="3" height="3" transform="translate(6.585 6.585)" fill="currentColor"></rect>
+                <rect width="3" height="3" transform="translate(3.585 9.585)" fill="currentColor"></rect>
+                <rect width="3" height="3" transform="translate(9.585 9.585)" fill="currentColor"></rect>
+                <rect width="3" height="3" transform="translate(0.585 12.585)" fill="currentColor"></rect>
+                <rect width="3" height="3" transform="translate(12.585 12.585)" fill="currentColor"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
