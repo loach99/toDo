@@ -31,8 +31,7 @@ const EditTaskModal = ({ header, description, endDate, taskId, projectId }: Edit
       isOpen={modal}
       onClose={() => {
         dispatch(closeEditModal());
-      }}
-    >
+      }}>
       <div>
         <Input
           label={'Название'}
