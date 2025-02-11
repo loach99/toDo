@@ -60,7 +60,6 @@ const Button = ({ content, isComment, setActiveComment, isLike, isSend, isClose,
         )
     }
     if (addTask) {
-
         return (
             <div>
                 <button onClick={() => dispatch(openSubtaskModal(true))} className={styles.addTask}>
@@ -68,7 +67,6 @@ const Button = ({ content, isComment, setActiveComment, isLike, isSend, isClose,
                 </button>
             </div>
         )
-
     }
     if (addSubTask) {
         return (

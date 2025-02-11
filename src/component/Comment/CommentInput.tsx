@@ -55,7 +55,6 @@ const CommentInput = ({ taskNumber, parentCommentId, setInputId, inputId }: Inpu
                                     )
                                 })}
                             </div>
-
                         </div>
                         <div className={styles.comment__btn__wrapper}>
                             <div onClick={() => setInputId(0)}>

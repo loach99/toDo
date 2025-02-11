@@ -41,9 +41,12 @@ const CreateTaskModal = ({ isOpen, projectId }: CreateTaskModalProps) => {
         dispatch(resetTaskData());
         dispatch(closeTaskModal());
     };
-
+    const handleClose = () => {
+        dispatch(closeTaskModal());
+        dispatch(resetTaskData());
+    };
     return (
-        <ModalWrapper isOpen={isOpen} header={'Создайте задачу'} onClose={() => dispatch(closeTaskModal())}>
+        <ModalWrapper isOpen={isOpen} header={'Создайте задачу'} onClose={handleClose}>
             <div className={styles.modal__wrap}>
                 <Input label={'Название'} placeholder={'Задача'} maxLength={20} required projectName={header} name={'header'} handleChange={handleChange} />
                 <Input label={'Описание'} placeholder={'Описание'} maxLength={20} required projectName={description} name={'description'} handleChange={handleChange} />

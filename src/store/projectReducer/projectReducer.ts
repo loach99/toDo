@@ -87,7 +87,6 @@ const projectReducer = (state = initialState, action: any) => {
                                         }
                                         return comments.map(comment => {
                                             if (comment.id === parentId) {
-
                                                 return {
                                                     ...comment,
                                                     comments: [...comment.comments, newComment]
