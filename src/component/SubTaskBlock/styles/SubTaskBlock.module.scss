@@ -1,26 +1,26 @@
-.task__subtasks{
-    >h2{
-        padding: 15px 0;
+.task__subtasks {
+  > h2 {
+    padding: 15px 0;
+  }
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .task__subtask {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    > div:nth-child(1) {
+      font-weight: 600;
     }
-    >div{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+    > div:nth-child(2) {
+      font-size: 12px;
+      text-decoration: underline;
+      cursor: pointer;
     }
-    .task__subtask{
-        display: flex;
-        justify-content: space-between;
-        border: 1px solid #ccc;
-        padding: 5px;
-        border-radius: 5px;
-        cursor: pointer;
-        >div:nth-child(1){
-            font-weight: 600;
-        }
-        >div:nth-child(2){
-            font-size: 12px;
-            text-decoration: underline;
-            cursor: pointer;
-        }
-    }
+  }
 }

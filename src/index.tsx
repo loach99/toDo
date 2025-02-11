@@ -14,7 +14,7 @@ root.render(
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Layout />}>
+          <Route path="/" element={<Layout />}>
             <Route index element={<Projects />} />
             <Route path="task/:taskId" element={<TaskPage />} />
           </Route>

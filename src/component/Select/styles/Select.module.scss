@@ -1,221 +1,221 @@
 .selectContainer {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .selectWrapper {
-    position: relative;
-    border-radius: 5px;
-    border: 2px solid #ccc;
+  position: relative;
+  border-radius: 5px;
+  border: 2px solid #ccc;
 
-    width: 125px;
+  width: 125px;
 
-    >div {
-        display: flex;
-        align-items: center;
-        padding: 5px;
-        font-size: 14px;
+  > div {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    font-size: 14px;
 
-        @media screen and (max-width: 675px) {
-            font-size: 10px;
-            font-weight: 500;
-        }
+    @media screen and (max-width: 675px) {
+      font-size: 10px;
+      font-weight: 500;
     }
+  }
 }
 
 .arrow {
-    position: absolute;
-    right: 6px;
-    top: 50%;
-    transition: transform 0.2s ease-in-out, margin-top 0.2s ease-in-out;
-    margin-top: -5px;
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transition:
+    transform 0.2s ease-in-out,
+    margin-top 0.2s ease-in-out;
+  margin-top: -5px;
 }
 
 .placeholder {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 30px;
-    padding: 5px;
-    cursor: pointer;
-    border: 1px;
-    font-family: "SF Pro";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    color: rgba(0, 0, 0, 0.6);
-    background: rgb(255, 255, 255);
-    box-sizing: border-box;
-    width: 100%;
-    border-radius: 2px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30px;
+  padding: 5px;
+  cursor: pointer;
+  border: 1px;
+  font-family: 'SF Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.6);
+  background: rgb(255, 255, 255);
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 2px;
 }
 
-.placeholder[data-status="default"] {
-    border: 1px solid rgba(0, 0, 0, 0.6);
+.placeholder[data-status='default'] {
+  border: 1px solid rgba(0, 0, 0, 0.6);
 }
 
-.placeholder[data-status="invalid"] {
-    border: 1px solid rgba(255, 0, 0, 1);
+.placeholder[data-status='invalid'] {
+  border: 1px solid rgba(255, 0, 0, 1);
 }
 
-.placeholder[data-selected="true"] {
-    color: rgb(0, 0, 0);
+.placeholder[data-selected='true'] {
+  color: rgb(0, 0, 0);
 }
 
-.selectWrapper[data-is-active="true"] .arrow {
-    transform: rotate(180deg);
-    margin-top: -6px;
+.selectWrapper[data-is-active='true'] .arrow {
+  transform: rotate(180deg);
+  margin-top: -6px;
 }
 
-.selectWrapper[data-is-active="true"] .placeholder {
-    border: 1px solid #0022f5;
+.selectWrapper[data-is-active='true'] .placeholder {
+  border: 1px solid #0022f5;
 }
 
-.selectWrapper:not([data-is-active="true"]) .placeholder:not([data-status="invalid"]):hover {
-    border: 1px solid rgba(0, 0, 0, 0.2);
+.selectWrapper:not([data-is-active='true']) .placeholder:not([data-status='invalid']):hover {
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .placeholder__queue {
-    background-color: #24afff70;
-    border: none;
-    color: #0496b3;
-    font-weight: 600;
-    padding: 5px;
-    border-radius: 4px;
-    font-size: 12px;
-    cursor: pointer;
+  background-color: #24afff70;
+  border: none;
+  color: #0496b3;
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
 
-    @media screen and (max-width: 675px) {
-        font-size: 10px;
-        font-weight: 500;
-    }
+  @media screen and (max-width: 675px) {
+    font-size: 10px;
+    font-weight: 500;
+  }
 }
 
 .placeholder__development {
-    background-color: #ffd32470;
-    border: none;
-    color: #f1ba05;
-    font-weight: 600;
-    padding: 5px;
-    border-radius: 4px;
-    font-size: 12px;
-    cursor: pointer;
+  background-color: #ffd32470;
+  border: none;
+  color: #f1ba05;
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
 
-    @media screen and (max-width: 675px) {
-        font-size: 10px;
-        font-weight: 500;
-    }
-
+  @media screen and (max-width: 675px) {
+    font-size: 10px;
+    font-weight: 500;
+  }
 }
 
 .placeholder__done {
-    background-color: #0acf03ed;
-    border: none;
-    color: #028100;
-    font-weight: 600;
-    padding: 5px;
-    border-radius: 4px;
-    font-size: 12px;
-    cursor: pointer;
+  background-color: #0acf03ed;
+  border: none;
+  color: #028100;
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
 
-    @media screen and (max-width: 675px) {
-        font-size: 10px;
-        font-weight: 500;
-    }
-
+  @media screen and (max-width: 675px) {
+    font-size: 10px;
+    font-weight: 500;
+  }
 }
 
 .select {
-    display: grid;
-    position: absolute;
-    list-style: none;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    z-index: 10;
-    background-color: rgba(255, 255, 255, 1);
+  display: grid;
+  position: absolute;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .option {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 30px;
-    padding: 5px;
-    border: 1px;
-    cursor: pointer;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 20px;
-    background-color: rgba(255, 255, 255, 1);
-    color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30px;
+  padding: 5px;
+  border: 1px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  background-color: rgba(255, 255, 255, 1);
+  color: rgb(0, 0, 0);
 
-    @media screen and (max-width: 675px) {
-        font-size: 10px;
-        font-weight: 500;
-    }
+  @media screen and (max-width: 675px) {
+    font-size: 10px;
+    font-weight: 500;
+  }
 }
 
-.option[data-testId="select-option-development"] {
-    background-color: #ffd32470;
-    border: none;
-    color: #f1ba05;
-    font-weight: 600;
-    padding: 5px;
-    font-size: 12px;
+.option[data-testId='select-option-development'] {
+  background-color: #ffd32470;
+  border: none;
+  color: #f1ba05;
+  font-weight: 600;
+  padding: 5px;
+  font-size: 12px;
 
-    @media screen and (max-width: 675px) {
-        font-size: 10px;
-        font-weight: 500;
-    }
+  @media screen and (max-width: 675px) {
+    font-size: 10px;
+    font-weight: 500;
+  }
 }
 
-.option[data-testId="select-option-queue"] {
-    background-color: #24afff70;
-    border: none;
-    color: #0496b3;
-    font-weight: 600;
-    padding: 5px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+.option[data-testId='select-option-queue'] {
+  background-color: #24afff70;
+  border: none;
+  color: #0496b3;
+  font-weight: 600;
+  padding: 5px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 
-    @media screen and (max-width: 675px) {
-        font-size: 10px;
-        font-weight: 500;
-    }
+  @media screen and (max-width: 675px) {
+    font-size: 10px;
+    font-weight: 500;
+  }
 }
 
-.option[data-testId="select-option-done"] {
-    background-color: #0acf03ed;
-    border: none;
-    color: #028100;
-    font-weight: 600;
-    padding: 5px;
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
-    font-size: 12px;
+.option[data-testId='select-option-done'] {
+  background-color: #0acf03ed;
+  border: none;
+  color: #028100;
+  font-weight: 600;
+  padding: 5px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  font-size: 12px;
 
-    @media screen and (max-width: 675px) {
-        font-size: 10px;
-        font-weight: 500;
-    }
+  @media screen and (max-width: 675px) {
+    font-size: 10px;
+    font-weight: 500;
+  }
 }
 
-.option[aria-selected="true"] {
-    background-color: rgba(0, 0, 0, 0.05);
+.option[aria-selected='true'] {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .option:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-.selectWrapper[data-mode="cells"] .select {
-    grid-template-columns: repeat(3, 1fr);
+.selectWrapper[data-mode='cells'] .select {
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.selectWrapper[data-mode="cells"] .option {
-    justify-content: center;
+.selectWrapper[data-mode='cells'] .option {
+  justify-content: center;
 }

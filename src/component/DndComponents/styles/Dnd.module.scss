@@ -1,23 +1,24 @@
-.task__column{
-    width: 20%;
-    border: 1px solid #ccc;
-    border-radius: 15px;
+.task__column {
+  width: 20%;
+  border: 1px solid #ccc;
+  border-radius: 15px;
 }
-.dragable{
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    cursor: pointer;
+.dragable {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
 }
-.dropable{
-    border: 1px solid #ccc;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    min-width: 280px;
+.dropable {
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 280px;
 }
-.dropable__active{
-    border: 1px solid #ccc;
-    background-color: rgba(179, 132, 255, 0.5);
-    transition: .3s;
+.dropable__active {
+  border: 1px solid #ccc;
+  background-color: rgba(179, 132, 255, 0.5);
+  transition: 0.3s;
+  min-width: 280px;
 }

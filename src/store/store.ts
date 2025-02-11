@@ -8,12 +8,19 @@ import timerReducer from './timerReducer';
 import { ModalsReducerState, ProjectType } from '../types';
 
 const rootReducers = combineReducers({
-    projectReducer: projectReducer as Reducer<{
-        filterData: string; projects: ProjectType[], name: string, description: string
-    }>,
-    modalsReducer: modalsReducer as Reducer<ModalsReducerState>,
-    taskReducer: taskReducer,
-    timerReducer: timerReducer as Reducer<{ isRunning: boolean, elapsedTime: string, startTime: any }>,
+  projectReducer: projectReducer as Reducer<{
+    filterData: string;
+    projects: ProjectType[];
+    name: string;
+    description: string;
+  }>,
+  modalsReducer: modalsReducer as Reducer<ModalsReducerState>,
+  taskReducer: taskReducer,
+  timerReducer: timerReducer as Reducer<{
+    isRunning: boolean;
+    elapsedTime: string;
+    startTime: any;
+  }>
 });
 
 export type RootState = ReturnType<typeof rootReducers>;

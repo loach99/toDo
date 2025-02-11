@@ -1,15 +1,15 @@
-import { useState } from "react";
-import { AccordionItem } from "./AccordionItem";
-import styles from './styles/Accordion.module.scss'
-import { SubTask } from "../../types";
+import { useState } from 'react';
+import { AccordionItem } from './AccordionItem';
+import styles from './styles/Accordion.module.scss';
+import { SubTask } from '../../types';
 
 interface IAccordion {
-    list: {
-        header: string;
-        description: string;
-    }[];
-    subTaskId: number
-    subtask: SubTask
+  list: {
+    header: string;
+    description: string;
+  }[];
+  subTaskId: number;
+  subtask: SubTask;
 }
 export const Accordion = ({ list, subtask, subTaskId }: IAccordion) => {
   const [openId, setId] = useState<null | number>(null);

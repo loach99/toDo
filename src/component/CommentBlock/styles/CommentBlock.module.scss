@@ -1,38 +1,37 @@
 .comments {
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 15px;
-    &__author {
-        width: 30px;
-        height: 30px;
-        background-color: #ccc;
-        border-radius: 50%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 15px;
+  &__author {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 50%;
+  }
+  &__file {
+    > img {
+      width: 300px;
     }
-    &__file{
-        >img{
-            width: 300px;
-        }
-    }
-    >div {
-        
-        >div:nth-child(1) {
-            margin-left: 15px;
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            >div {
-                display: flex;
-                align-items: end;
-                gap: 5px;
-            }
-        }
-    }
-    .comments__file{
-        border: 4px solid #ccc;
-        padding: 10px;
-        border-radius: 5px;
+  }
+  > div {
+    > div:nth-child(1) {
+      margin-left: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      > div {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        align-items: end;
+        gap: 5px;
+      }
     }
+  }
+  .comments__file {
+    border: 4px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

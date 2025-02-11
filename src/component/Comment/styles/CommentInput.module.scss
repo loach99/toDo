@@ -1,48 +1,47 @@
 .comment__btn {
-    display: flex;
-    align-items: center;
-    justify-content: end;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
-.comment>form {
-    position: relative;
+.comment > form {
+  position: relative;
 }
 
 .comment__btn__wrapper {
-    position: absolute;
-    bottom: 10px;
-    display: flex;
-    right: 15px;
-    gap: 10px;
-    @media screen and (max-width: 675px) {
-        gap: 5px;
-    }
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  right: 15px;
+  gap: 10px;
+  @media screen and (max-width: 675px) {
+    gap: 5px;
+  }
 }
 
 .comment__input {
-    >textarea {
-        width: 100%;
-        height: 140px;
-        border: 1px solid #ccc;
-        outline-color: #ccc;
-        border-radius: 15px;
-        padding: 15px 10px 25px 10px;
-        resize: none;
-    }
-
+  > textarea {
+    width: 100%;
+    height: 140px;
+    border: 1px solid #ccc;
+    outline-color: #ccc;
+    border-radius: 15px;
+    padding: 15px 10px 25px 10px;
+    resize: none;
+  }
 }
-.comment__files{
-    display: flex;
-    gap: 8px;
-    .comment__file{
-        border: 1px solid #ccc;
-        width: 30px;
-        border-radius: 5px;
-        background-color: #f0f8ff;
-        padding: 5px;
-        top: 0;
-        >img{
-            width: 20px;
-        }
+.comment__files {
+  display: flex;
+  gap: 8px;
+  .comment__file {
+    border: 1px solid #ccc;
+    width: 30px;
+    border-radius: 5px;
+    background-color: #f0f8ff;
+    padding: 5px;
+    top: 0;
+    > img {
+      width: 20px;
     }
+  }
 }

@@ -1,56 +1,54 @@
 .header {
-    background-color: rgba(38, 36, 35, .9);
-    -webkit-box-shadow: 0px 0px 5px 5px rgba(38, 36, 35, .9);
-    -moz-box-shadow: 0px 0px 5px 5px rgba(38, 36, 35, .9);
-    box-shadow: 0px 0px 5px 5px rgba(38, 36, 35, .9);
-    padding: 15px;
-    display: flex;
-    position: fixed;
-    width: 100%;
-    align-items: center;
-    gap: 20px;
-    >div:nth-child(2) {
-        display: none;
-        @media screen and (max-width: 675px) {
-            display: block;
-        }
+  background-color: rgba(38, 36, 35, 0.9);
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(38, 36, 35, 0.9);
+  -moz-box-shadow: 0px 0px 5px 5px rgba(38, 36, 35, 0.9);
+  box-shadow: 0px 0px 5px 5px rgba(38, 36, 35, 0.9);
+  padding: 15px;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+  > div:nth-child(2) {
+    display: none;
+    @media screen and (max-width: 675px) {
+      display: block;
     }
+  }
 }
 
 .main {
-    padding: 65px 0 0;
-    display: flex;
-    background-color: #3d3938;
-  
+  padding: 65px 0 0;
+  display: flex;
+  background-color: #3d3938;
 }
 
 .sideBar {
-    background-color: rgba(66, 26, 131, 0.28);
-    min-width: 300px;
-    height: calc(100vh - 65px);
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 15px;
-    transition: .5s;
-    @media (max-width: 875px) {
-        height: auto;
-    }
-    @media (max-width: 675px) {
-        position: absolute;
-        transform: translateX(-100%);
-    }
-   
+  background-color: rgba(66, 26, 131, 0.28);
+  min-width: 300px;
+  height: calc(100vh - 65px);
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 15px;
+  transition: 0.5s;
+  @media (max-width: 875px) {
+    height: auto;
+  }
+  @media (max-width: 675px) {
+    position: absolute;
+    transform: translateX(-100%);
+  }
 }
 
 .project {
-    background-color: #fff;
-    border: 8px double #ccc;
-    padding: 10px;
-    border-radius: 5px;
+  background-color: #fff;
+  border: 8px double #ccc;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .content {
-    width: 100%;
+  width: 100%;
 }
