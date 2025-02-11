@@ -4,13 +4,15 @@
   justify-content: center;
   gap: 25px;
   padding: 25px;
+  @media screen and (max-width: 675px) {
+    padding: 35px 0 0;
+  }
   > div {
     position: relative;
     .project__btn__delete {
       position: absolute;
       top: 15px;
       right: 15px;
-
       z-index: 1;
     }
   }

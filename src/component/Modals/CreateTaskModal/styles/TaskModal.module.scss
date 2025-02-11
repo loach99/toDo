@@ -1,6 +1,8 @@
 .modal__wrap {
   width: 360px;
-
+  @media screen and (max-width: 675px) {
+    width: auto;
+  }
   .select {
     > div {
       gap: 10px;
