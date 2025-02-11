@@ -4,8 +4,10 @@
   justify-content: center;
   gap: 25px;
   padding: 25px;
+  
   @media screen and (max-width: 675px) {
     padding: 35px 0 0;
+    height: calc(100vh - 65px);
   }
   > div {
     position: relative;
