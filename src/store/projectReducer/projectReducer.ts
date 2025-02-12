@@ -160,7 +160,7 @@ const projectReducer = (state = initialState, action: any) => {
                 if (task.number === action.payload.taskId) {
                   return {
                     ...task,
-                    startTime: moment().valueOf(),
+                    startTime: action.payload.startTime,
                     isRunning: true
                   };
                 }

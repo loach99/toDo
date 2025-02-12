@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 export const addProject = (project: any) => ({
   type: 'ADD_PROJECT',
   payload: project
@@ -49,9 +51,9 @@ export const filterProject = (value: string) => ({
   type: 'FILTER_PROJECT',
   payload: value
 });
-export const startTimer = (projectId: number, taskId: number) => ({
+export const startTimerReq = (projectId: number, taskId: number, startTime: number) => ({
   type: 'START_TIMER',
-  payload: { projectId, taskId }
+  payload: { projectId, taskId, startTime }
 });
 export const stopTimer = (projectId: number, taskId: number) => ({
   type: 'STOP_TIMER',
@@ -61,3 +63,19 @@ export const editTask = (projectId: number, taskId: number, header: string, desc
   type: 'EDIT_TASK',
   payload: { projectId, taskId, header, description, endDate }
 });
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+let interval: any;
+export const startTimer = (projectId: number, taskId: number) => {
+  return async (dispatch: any) => {
+    const startTime = moment().valueOf();
+    interval = setInterval(() => {
+      dispatch(startTimerReq(projectId, taskId, startTime));
+    }, 1000);
+  };
+};
+export const stopTimerAction = (projectId: number, taskId: number) => {
+  return async (dispatch: any) => {
+    clearInterval(interval);
+    dispatch(stopTimer(projectId, taskId));
+  };
+};

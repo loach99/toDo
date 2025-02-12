@@ -1,9 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable array-callback-return */
 import { DndContext, PointerSensor, useSensor } from '@dnd-kit/core';
 import { Droppable } from '../../component/DndComponents/Dropable';
 import { useSelector, useDispatch } from 'react-redux';
 import { ITask, Priority, TaskType } from '../../types';
-
 import { Draggable } from '../../component/DndComponents/Dragable';
 import styles from './styles/TaskPage.module.scss';
 import { deleteTask, moveTask, startTimer, stopTimer } from '../../store/projectReducer/actions/actions';
@@ -12,13 +12,16 @@ import CreateTaskModal from '../../component/Modals/CreateTaskModal/CreateTaskMo
 import ShowTaskModal from '../../component/Modals/TaskModal/ShowTaskModal';
 import { RootState } from '../../store/store';
 import Button from '../../component/Button/Button';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import moment from 'moment';
+import { ThunkDispatch } from 'redux-thunk';
 
 const TaskPage = () => {
   const { taskId } = useParams();
-  const dispatch = useDispatch();
+  const dispatch: ThunkDispatch<RootState, unknown, any> = useDispatch();
   const [active, setActive] = useState(true);
+  const [time, setTime] = useState('');
+  const [activeId, setActiveId] = useState(0);
   const tasks = useSelector((state: RootState) => state.projectReducer.projects ?? [])
     .filter((project: any) => project.id === Number(taskId))
     .flatMap((project: any) => project.tasks ?? []);
@@ -49,7 +52,6 @@ const TaskPage = () => {
     const hours = duration.hours();
     const minutes = duration.minutes();
     const seconds = duration.seconds();
-
     return `${hours}ч:${minutes}м:${seconds}с`;
   };
   const handleDragEnd = (event: any) => {
@@ -61,6 +63,7 @@ const TaskPage = () => {
         dispatch(moveTask(active.id, newStatus, Number(taskId)));
         if (newStatus === 'development') {
           dispatch(startTimer(Number(taskId), active.id));
+          setActiveId(active.id);
         } else {
           dispatch(stopTimer(Number(taskId), active.id));
         }
